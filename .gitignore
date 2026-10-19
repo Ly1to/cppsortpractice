@@ -1,0 +1,10 @@
+# 编译产物
+a.out
+*.o
+*.obj
+*.exe
+*.out
+
+# 构建目录
+build/
+cmake-build-*/
