@@ -1,3 +1,6 @@
+# 已拆分的单文件版本
+/OrdCsltion.cpp
+
 # 编译产物
 a.out
 *.o
@@ -7,4 +10,5 @@ a.out
 
 # 构建目录
 build/
-cmake-build-*/
+
+compile_flags.txt
