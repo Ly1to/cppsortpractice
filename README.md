@@ -20,3 +20,24 @@ make run RIDES=rides_10k.txt
 ```sh
 ./build/OrdCsltion rides_50k_B.txt
 ```
+
+## 生成随机测试数据
+
+项目包含一个只依赖 Python 3 标准库的数据生成器。以下命令会生成 100000 条可复现的测试记录：
+
+```sh
+python3 tools/generate_rides.py \
+  --count 100000 \
+  --seed 2026 \
+  --output rides_100k_random.txt
+```
+
+也可以使用 Makefile：
+
+```sh
+make generate GENERATE_COUNT=100000 GENERATE_SEED=2026 \
+  GENERATED_RIDES=rides_100k_random.txt
+make run RIDES=rides_100k_random.txt
+```
+
+生成数据会沿用现有文件的字段格式和近似分布。完整参数与说明见 [`docs/随机测试数据生成器.md`](docs/随机测试数据生成器.md)。
