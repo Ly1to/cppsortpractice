@@ -61,7 +61,7 @@ void mergeSortByFeeRange(std::vector<Ride> &rides, std::vector<Ride> &buffer,
     return;
   }
 
-  const std::size_t middle = left + (right - left) / 2;
+  const std::size_t middle = left + ((right - left) >> 1);
   mergeSortByFeeRange(rides, buffer, left, middle);
   mergeSortByFeeRange(rides, buffer, middle, right);
 
