@@ -12,3 +12,7 @@ a.out
 build/
 
 compile_flags.txt
+
+# 随机生成的测试数据
+/rides_generated*.txt
+/rides_*_random.txt
